@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pixfort Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /* General Styles */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+  }
+  html,body{
+    overflow-x: hidden;
+  }
+  
+  .parent {
+    height: 3.6rem;display: flex;align-items: center;justify-content:flex-end;
+  }
+  .container {display: flex;width: 100%; height: fit-content; color: rgb(163, 159, 159);
+  }
+  .div {
+    text-decoration: none;text-decoration-style: none;
+  }
+  .anc1 {
+    display: flex;justify-content: end;align-items: center;border-right: 1px solid rgb(163, 159, 159);width: 11rem;padding: 3px 2rem 3px 3rem;
+  }
+  .anc1 i {
+    padding: 3px 5px;
+  }
+  .English-menu li {
+    list-style: none;
+  }
+  .English-menu li a {
+    text-decoration: none;color: rgb(163, 159, 159);
+  }
+  
+  .English-menu li ul {
+    display: none;
+  }
+  
+  .English-menu li:hover ul {
+    display: block;
+  }
+  .anc2 {
+    display: flex;padding-left: 15px;width: 38rem;align-items: center;
+  }
+  #teer {
+    padding: 3px 3px 5px 5px;
+    transition: all 0.3s linear 0s;
+  }
+  #teer:hover {
+    padding: 3px 3px 5px 29px;
+  }
+  .anc3 {
+    display: flex;justify-content: center;align-items: center;width: 12rem;border-left: 1px solid rgb(163, 159, 159);
+  }
+  .anc3 i {
+    padding: 3px 5px;
+  }
+  .anc4 {
+    display: flex;justify-content: center;align-items: center;width: 12rem;border-left: 1px solid rgb(163, 159, 159);
+  }
+  .anc4 i {
+    padding: 3px 5px;
+  }
+  .anc5 {
+    display: flex;align-items: center;width: 12rem;border-left: 1px solid rgb(163, 159, 159);
+  }
+  .anc5 i {
+    padding: 3px 9px;
+  }
+  .menu {
+    display: flex;align-items: center;justify-content: space-evenly;border-top: 1px solid rgb(163, 159, 159);color: rgb(163, 159, 159);height: 4rem;
+    overflow-x: hidden;
+  }
+  .menu2 {
+    display: flex;align-items: center;justify-content: space-evenly;width: 100%;
+  }
+  .name {
+    font-size: 3rem;color: black;width: 27rem;padding-left: 4rem;
+  }
+  .menu button {
+    padding: 13px 18px;border: none;background: rgb(214, 211, 211);border-radius: 3px;margin: 2px;color: black;font-size: 1rem;
+  }
+  .menu button:hover {
+    color: black;background: linear-gradient(45deg, blue, rgba(99, 82, 82, 0.5));
+  }
+  sup {
+    background: blue;color: white;padding: 5px;border-radius: 30px;border: none;font-size: 10px;
+  }
+  /* Home Page Styles */
+  .home-page {
+    width: 100%; overflow-x: hidden; height:  33rem;background: linear-gradient(45deg, blue, rgba(99, 82, 82, 0.5));position: relative; border: 1px solid transparent;
+  }
+  .content_menu {
+    width: 49rem;height: fit-content;margin: 5rem auto 15rem 5rem;
+  }
+  p{
+    margin: 9px 0px;padding: 5px;
+  }
+  .pala {
+    display: flex;align-items: center;justify-content: center;font-size: 1rem;width: 15rem;height: 2rem; padding: 6px 10px; background: rgba(230, 230, 230, 0.5); border-radius: 10px;transition: all 0.2s ease-in 0s;
+  }
+  .pala:hover {
+    background: white; width:  20rem;height: 3rem;font-size: 1.5rem;
+  }
+  .scnd {
+    font-size: 4rem;
+  }
+  .third {
+    font-size: 1.4rem;
+  }
+  .buttons {
+    display: flex;color: white;
+  }
+  .first-button {
+    font-size: 1.3rem;padding: 12px 27px;background: rgb(217, 255, 0);border: none;border-radius: 5px;color: white;
+  }
+  .second-button {
+    font-size: 1.3rem;padding: 12px 27px;background: transparent;margin-left: 40px;border-radius: 5px;border: 2px solid rgb(224, 219, 219);color: white;
+  }
+  .second-button:hover {
+    background: rgb(217, 255, 0);
+    border: none;
+  }
+  /* Some chat gpt codes */
+  .menu button:hover {
+    color: black;background: linear-gradient(45deg, blue, rgba(99, 82, 82, 0.5));animation: buttonHover 0.3s ease forwards;
+  }
+  @keyframes buttonHover {0% { transform: scale(1);}100% { transform: scale(1.1); }
+  }
+  /* Some second code of chat gpt */
+  .anc1 i:hover {
+    animation: iconSpin 0.5s linear infinite;
+  }
+  @keyframes iconSpin {
+    100% {transform: rotate(360deg);}
+  }
+  /* Third code of chat gpt */
+  .content_menu p {
+    opacity: 0;animation: textFadeIn 1s ease forwards;
+  }
+  @keyframes textFadeIn {0% {opacity: 0;transform: translateY(20px); }100% {opacity: 1;transform: translateY(0);}
+  }
+  /* Subscription Section Styles */
+  .subscription-section {
+    display: flex;justify-content: space-between;align-items: center;padding: 50px;
+    overflow-x: hidden;
+    /* border: 1px solid black; */
+  }
+  .second-content {
+    background-color: #ffffff;padding: 20px;margin: 20px;max-width: 50%;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);border-radius: 8px;
+  }
+  .second-content h1 {
+    text-align: center;color: #333;
+  }
+  .in-content {
+    text-align: center;margin-top: 20px;
+  }
+  .in-content p {
+    color: #666;
+  }
+  .subscription-form {
+    display: flex; justify-content: center;align-items: center;gap: 10px;margin-top: 15px;
+  }
+  .subscription-form input {
+    padding: 10px;font-size: 16px;border: 1px solid #ccc;border-radius: 4px;width: 250px;
+  }
+  .subscription-form button {
+    padding: 10px 20px;font-size: 16px;color: #fff;background-color: #007BFF;border: none;border-radius: 4px;cursor: pointer;transition: background-color 0.3s ease;
+  }
+  .subscription-form button:hover {
+    background-color: #0056b3;
+  }
+  .in-content a {
+    color: #007BFF;text-decoration: none;
+  }
+  .in-content a:hover {
+    text-decoration: underline;
+  }
+  .animate{
+    height: 20rem;width: fit-content;background: transparent; position:relative;overflow: hidden;
+    /* border: 1px solid black; */
+  }
+  .bubbles{
+    position: relative;display: flex;
+  }
+  .bubbles span{
+   position: relative;width: 20px;height: 20px;background:  rgb(95, 95, 168);margin: 0 4px;border-radius: 50%;box-shadow:  0 0 0 10px rgb(106, 106, 211),
+                                                                                                                              0 0 50px rgb(141, 141, 199),
+                                                                                                                               0 0 100px rgb(203, 203, 224), ;
+  
+   animation: animate 51s linear infinite ;
+   animation-duration: calc(40s/ var(--i));           
+  }
+  .bubbles span:nth-child(even){
+    background: rgb(128, 109, 163);
+    box-shadow:  0 0 0 10px rgb(174, 105, 180),
+    0 0 50px rgb(167, 138, 165),
+    0 0 100px rgb(225, 225, 228), ;
+  }
+  @keyframes animate{
+    0% {
+         transform :translateY(100vh)  scale(0);
+    }
+    100%{
+         transform: translateY(-10vh) scale(1);
+  }
+  
+    
+  }
+  .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .socials {
+    gap: 20px;
+  }
+  
+  .socials a {
+    font-size: 24px;
+  }
+  
+  .links {
+    gap: 10px;
+  }
+  
+  .legal {
+    font-size: 12px;
+    margin: 0;
+  }
+  
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(3) scaleX(2.25);
+    transform-origin: bottom;
+    box-sizing: border-box;
+    display: block;
+    pointer-events: none;
+  }
+  
+  footer {
+    position: relative;
+    left: 0;
+    bottom: 12px;
+    display: flex;
+    width: 100%;
+    height: 370px;
+    background: linear-gradient(45deg, blue, rgba(99, 82, 82, 0.5));
+    overflow-x: hidden;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-bottom: 80px;
+    padding-left: 60px;
+    width: 100%;
+    
+  }
+  
+  @media (width > 420px) {
+    section {
+      align-items: center;
+      padding-left: 0;
+      gap: 20px;
+    }
+  
+    .links {
+      gap: 20px;
+    }
+  }
+  
+  
+  
+  
+  
+  /* General Styles */
+  
+  
+  
+  .home-page {
+    width: 100%;
+    height: auto; /* Adjusting height for responsiveness */
+    background: linear-gradient(45deg, blue, rgba(99, 82, 82, 0.5));
+    position: relative;
+    border: 1px solid transparent;
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }
+  
+  .content_menu {
+    width: 100%;
+    max-width: 100vw; /* Ensure content menu fits within viewport width */
+    height: fit-content;
+    margin: 5rem auto 15rem auto;
+    padding: 0 5%; /* Add padding to align content with edges */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }
+  
+  
+  
+  .pala {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 100%; /* Make the width full for responsiveness */
+    height: 2rem;
+    padding: 6px 10px;
+    background: rgba(230, 230, 230, 0.5);
+    border-radius: 10px;
+    transition: all 0.2s ease-in 0s;
+  }
+  
+  .pala:hover {
+    background: white;
+    font-size: 1.5rem;
+  }
+  
+  .scnd {
+    font-size: 4rem;
+  }
+  
+  .third {
+    font-size: 1.4rem;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center; /* Center align buttons */
+    margin-top: 20px; /* Add margin to space out buttons */
+  }
+  
+  .first-button, .second-button {
+    font-size: 1.3rem;
+    padding: 12px 27px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .first-button {
+    background: rgb(217, 255, 0);
+  }
+  
+  .second-button {
+    background: transparent;
+    border: 2px solid rgb(224, 219, 219);
+    margin-left: 40px;
+  }
+  
+  .second-button:hover {
+    background: rgb(217, 255, 0);
+    border: none;
+  }
+  
+  /* Add more styles here */
+  
+  /* Media Queries */
+  /* Media Query for smaller screens */
+  @media only screen and (max-width: 768px) {
+      .content_menu {
+          padding: 0 10px; /* Adjust padding for smaller screens */
+      }
+      .subscription-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+      }
+      .subscription-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+        width: 100%; /* Ensure the form takes full width */
+        max-width: 800px; /* Adjust maximum width as needed */
+        margin: 0 auto; /* Center the form horizontally */
+        padding: 0 10px; /* Add padding for better spacing */
+        box-sizing: border-box; /* Include padding in width calculation */
+      }
+      .second-content h1{
+        font-size: 2a0px;
+      }
+      .in-content p{
+        font-size: 20px;
+      }
+      
+      .parent{
+        width: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+  
+      }
+      .menu{
+        width: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+  
+      }
+    
+      
+  
+      .buttons {
+          flex-direction: column; /* Stack buttons vertically on smaller screens */
+          align-items: center; /* Center align buttons */
+      }
+  
+      .first-button, .second-button {
+          width: 100%; /* Make buttons full width on smaller screens */
+          margin: 10px 0; /* Add margin to space out buttons */
+      }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    </style>
+</head>
+<body>
+  <main>
+      <navbar>
+            <div class="parent">
+                <div class="container">
+                    <div class="anc1">
+                        <i class="fa-solid fa-earth-africa"></i>
+                        <ul class="English-menu">
+                            <li><a href="#">English</a>
+                                <ul>
+                                    <li><a href="#">French</a></li>
+                                    <li><a href="#">Spanish</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="anc2">
+                        <p>Get the most Advanced theme</p>
+                        <i id="teer" class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="anc3">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>La Defense, Paris</p>
+                    </div>
+                    <div class="anc4">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+ 06 48 48 87 40</p>
+                    </div>
+                    <div class="anc5">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-solid fa-baseball"></i>
+                        <i>X</i>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="name">Essentials</div>
+                <div class="menu2">
+                    <p>Demos</p>
+                    <p>Pages</p>
+                    <p>Portfolio</p>
+                    <p>Blog</p>
+                    <p>Shop</p>
+                    <p>Elements</p>
+                    <div class="div"><i class="fa-regular fa-heart"></i><sup>0</sup></div>
+                    <div class="div"><i class="fa-solid fa-bag-shopping"></i><sup>1</sup></div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <button>Purchase Today</button>
+                    <button> Made by Danish</button>
+                </div>
+            </div>
+        </navbar>
+        <div class="home-page">
+            <div class="content">
+                <div class="content_menu">
+                    <div class="pala">
+                        <p>First Time on Themeforest</p>
+                    </div>
+                    <p class="scnd">Reinventing the way you creating the Websites.</p>
+                    <p class="third">Combine Seamlessly fitting layouts, customize everything</p>
+                    <div class="buttons">
+                        <button class="first-button">Discover features</button>
+                        <button class="second-button">Get Essentials</button>
+                     </div>
+                </div>
+            </div>
+         </div>
+    </main> 
+    <div class="subscription-section">
+        <div class="second-content">
+            <h1>Some Additional Products</h1>
+            <div class="in-content">
+                <h1>Subscribe to our newsletter</h1>
+                <p>Get our latest product updates and exclusive promotions</p>
+                <div class="subscription-form">
+                    <input type="email" placeholder="Enter your e-mail address" id="email">
+                    <button id="subscribe-btn">Subscribe</button>
+                </div>
+                <br>
+                <p>By subscribing, you agree to our <a href="#">privacy policy</a>.</p>
+            </div>
+        </div>
+        <div class="animate">
+            <div class="bubbles">
+                <span style="--i:11"></span>
+                <span style="--i:12"></span>
+                <span style="--i:24"></span>
+                <span style="--i:21"></span>
+                <span style="--i:14"></span>
+                <span style="--i:23"></span>
+                <span style="--i:18"></span>
+                <span style="--i:17"></span>
+                <span style="--i:19"></span>
+                <span style="--i:20"></span>
+                <span style="--i:22"></span>
+                <span style="--i:26"></span>
+                <span style="--i:18"></span>
+                <span style="--i:21"></span>
+                <span style="--i:15"></span>
+                <span style="--i:13"></span>
+                <span style="--i:26"></span>
+                <span style="--i:11"></span>
+                <span style="--i:17"></span>
+                <span style="--i:13"></span>
+                <span style="--i:23"></span>
+                <span style="--i:22"></span>
+                <span style="--i:26"></span>
+                <span style="--i:18"></span>
+                <span style="--i:21"></span>
+                <span style="--i:15"></span>
+                <span style="--i:13"></span>
+                <span style="--i:26"></span>
+                <span style="--i:11"></span>
+                <span style="--i:17"></span>
+                <span style="--i:13"></span>
+                <span style="--i:23"></span>
+           </div>
+         </div>
+    </div>
+<footer>
+      <div class="background">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="100%"
+          height="100%"
+          viewBox="0 0 1600 900"
+        >
+          <defs>
+            <linearGradient id="bg" x2="0%" y2="100%">
+              <stop
+                offset="0%"
+                style="stop-color: rgba(53, 127, 242, 0.6)"
+              ></stop>
+              <stop
+                offset="100%"
+                style="stop-color: rgba(38, 89, 190, 0.06)"
+              ></stop>
+            </linearGradient>
+            <path
+              id="wave"
+              fill="url(#bg)"
+              d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+      s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+            />
+          </defs>
+          <g>
+            <use xlink:href="#wave" opacity=".3">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="8s"
+                calcMode="spline"
+                values="270 230; -334 180; 270 230"
+                keyTimes="0; .5; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlink:href="#wave" opacity=".6">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="6s"
+                calcMode="spline"
+                values="-270 230;243 220;-270 230"
+                keyTimes="0; .6; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlink:href="#wave" opacty=".9">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="4s"
+                calcMode="spline"
+                values="0 230;-140 200;0 230"
+                keyTimes="0; .4; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+          </g>
+        </svg>
+      </div>
+
+      <section>
+        <ul class="socials">
+          <li><a class="fa-brands fa-facebook"></a></li>
+          <li><a class="fa-brands fa-twitter"></a></li>
+          <li><a class="fa-brands fa-linkedin"></a></li>
+          <li><a class="fa-brands fa-instagram"></a></li>
+        </ul>
+        <ul class="links">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Services</a></li>
+          <li><a>Team</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+        <p class="legal">©  Now 2024 All rights reserved</p>
+      </section>
+    </footer>
+  
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
